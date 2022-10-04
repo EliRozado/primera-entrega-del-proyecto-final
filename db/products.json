@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": 1664822934150,
+    "title": "peluche",
+    "description": "pikachu peluche",
+    "barcode": "02458963",
+    "thumbnail": "link/link",
+    "price": "450",
+    "stock": "20",
+    "id": 1
+  },
+  {
+    "timestamp": 1664822944031,
+    "title": "regla",
+    "description": "regla de como entrrenar a tu dragon",
+    "barcode": "02589663",
+    "thumbnail": "link/link",
+    "price": "150",
+    "stock": "30",
+    "id": 2
+  },
+  {
+    "timestamp": 1664827158148,
+    "title": "peluche",
+    "description": "catcus plush",
+    "barcode": "0248738",
+    "thumbnail": "link/link",
+    "price": "300",
+    "stock": "25",
+    "id": 4
+  }
+]
