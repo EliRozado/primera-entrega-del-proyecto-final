@@ -1,4 +1,5 @@
-const express = require("express")
+const express = require("express");
+const { adminCheck } = require("./middleware/adminCheck.js");
 const { Router } = express;
 
 const router = Router();
@@ -7,21 +8,22 @@ const { ProdCont } = require('./productsCont.js');
 
 const products = new ProdCont(productsDB)
 
-const isAdmin = false;
-
-// * middleware 
-function adminCheck(req, res, next){
-    if(isAdmin){
-        next()
-    }else(
-        res.send({error: -1, mensaje: `método no autorizado para usuarios`})
-    )
-}
 
 // -----------------------------
 // ---------* Rutas *-----------
-// -----------------------------
-router.get('/:id?', (req, res) => {
+/*
+ Te dejo separados los archivos en carpetas asi te empezas a organizar.
+ tenes varias formas de hacerlo, por ahora vamos a trabajar con MVC
+ a mi particularmente me gusta trabajar con modulos. 
+ Es decir una carpeta modules en donde habria una carpeta para cart y una products, en este caso, y dentro de cada 
+ una de ellas van a tener, en archivos separados, las rutas, los controladores y demas archivos que aun no vimos. 
+ Entonces en un misma carpeta tenes todos los archivos juntos y no tenes que estar buscando, cuando los proyectos 
+ se tornan grandes, es una muy buena arquitectura. Te comento para que tengas en cuenta a futuro.
+
+ Por ahora te animo a que separes las rutas y las funciones. Te dejo un ejemplo en routes/cartRoutes.js y controller/cartController.js
+ -----------------------------
+*/
+router.get('/:id', (req, res) => {
     // * devuelve todos los productos o lista un producto por su id
     if(req.params.id){
         const {id} = req.params;

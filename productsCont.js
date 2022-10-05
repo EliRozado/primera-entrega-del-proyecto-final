@@ -37,12 +37,26 @@ class ProdCont {
             const { title, description, barcode, thumbnail, price, stock } = product;
 
             data[productoIndex].timestamp = Date.now();
-            data[productoIndex].title = title;
-            data[productoIndex].description = description;
-            data[productoIndex].barcode = barcode;
-            data[productoIndex].thumbnail = thumbnail;
-            data[productoIndex].price = price;
-            data[productoIndex].stock = stock;
+            // Podemos usar un operador ternario, que es un condicional if, de un linea.
+            // Por si solo se actualiza una parte de los datos del producto
+            /* 
+            Entonces:
+            en data[productoIndex].title = 
+            vamos a guardar el resultado de un condicional
+            Entonces preguntamos si la propiedad tiene algo
+            title ?
+                asignamos esa propiedad
+            title 
+                sino, le dejamos la info que tiene
+            : data[productoIndex].title ;
+            Asi con cada propiedad
+            */ 
+            data[productoIndex].title = title? title: data[productoIndex].title ;
+            data[productoIndex].description = description ? description : data[productoIndex].description;
+            data[productoIndex].barcode = barcode? barcode : data[productoIndex].barcode;
+            data[productoIndex].thumbnail = thumbnail? thumbnail : data[productoIndex].thumbnail;
+            data[productoIndex].price = price? price : data[productoIndex].price;
+            data[productoIndex].stock = stock? stock : data[productoIndex].stock;
 
             fs.writeFileSync(this.archivo, JSON.stringify(data, null, 2))
             return 'El producto fue editado';

@@ -1,7 +1,7 @@
 [
   {
-    "timestamp": 1664822934150,
-    "title": "peluche",
+    "timestamp": 1664939344323,
+    "title": "Peluche",
     "description": "pikachu peluche",
     "barcode": "02458963",
     "thumbnail": "link/link",
@@ -28,5 +28,37 @@
     "price": "300",
     "stock": "25",
     "id": 4
+  },
+  {
+    "id": 5,
+    "timestamp": 1664931311271
+  },
+  {
+    "id": 6,
+    "timestamp": 1664931314652
+  },
+  {
+    "id": 7,
+    "timestamp": 1664931345114
+  },
+  {
+    "title": "other prod",
+    "description": "its an amazing prod",
+    "barcode": "02458963",
+    "thumbnail": "anImage.jpg",
+    "price": "1200",
+    "stock": "126",
+    "id": 8,
+    "timestamp": 1664931467589
+  },
+  {
+    "title": "another prod",
+    "description": "description",
+    "barcode": "02458963",
+    "thumbnail": "anImage.jpg",
+    "price": "1200",
+    "stock": "126",
+    "id": 9,
+    "timestamp": 1664931549698
   }
 ]

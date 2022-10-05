@@ -1,9 +1,9 @@
 const express = require('express');
-const cartRouter = require('./cart.js');
-const prodRouter = require('./products.js');
+const cartRouter = require('./routes/cartRoutes')
+const prodRouter = require('./products');
 
 const app = express();
-const port = process.env.Port || 8080;
+const port = process.env.Port || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
